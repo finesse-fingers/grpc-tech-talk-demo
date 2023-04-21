@@ -7,11 +7,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-
-  <ItemGroup>
-      <Protobuf Include="..\Grpc.Shared\Protos\greet.proto" Link="Protos\greet.proto" GrpcServices="Client" />
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Grpc.Tools" Version="2.54.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,6 +14,11 @@
     </PackageReference>
     <PackageReference Include="Grpc.Net.Client" Version="2.52.0" />
     <PackageReference Include="Google.Protobuf" Version="3.22.3" />
+    <PackageReference Include="Google.Api.CommonProtos" Version="2.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\Grpc.Shared\Protos\greet.proto" Link="Protos\greet.proto" GrpcServices="Client" ProtoRoot="..\Grpc.Shared" />
   </ItemGroup>
 
 </Project>
